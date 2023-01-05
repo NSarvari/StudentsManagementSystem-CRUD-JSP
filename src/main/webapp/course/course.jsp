@@ -3,6 +3,8 @@
     Created on : Jan 4, 2023, 12:27:45 AM
     Author     : Nabila
 --%>
+<%@page import="java.sql.*" %>
+<% Class.forName("com.mysql.jdbc.Driver");%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,6 +28,7 @@
                         <label class="form-label">Duration</label>
                         <input type="text" id="duration" name="duration" placeholder="Duration" class="form-control" required>
                     </div>
+                    </br>       
                     <div>
                         <input type="submit" name="submit" class="btn btn-info" value="submit">
                         <input type="reset" name="reset" class="btn btn-warning" value="reset">
@@ -41,8 +44,33 @@
                                 <th>Duration</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
-
                             </tr>
+                        <tbody>
+                            <%
+                                Connection con;
+                                PreparedStatement pst;
+                                ResultSet rs;
+                                
+                                Class.forName("com.mysql.jdbc.Driver");
+                                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student-management-system-java", "root", "");
+                                String query = "select * from course";
+                                Statement st = con.createStatement();
+                                rs = st.executeQuery(query);
+                                while(rs.next())
+                                {
+                                    String id = rs.getString("id");
+                                    
+                                
+
+                            %>
+                            <tr>
+                                <td><%=rs.getString("courseName") %></td>
+                                <td><%=rs.getString("duration") %></td>
+                                <td><a href="courseUpdate.jsp?id=<%=id %>">Edit</a></td>
+                                <td><a href="courseDelete.jsp?id=<%=id %>">Delete</a></td>
+                            </tr>
+                            <% } %>
+                        </tbody>
                         </thead>
                     </table>
                 </div>
