@@ -12,6 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../component/style.css" rel="stylesheet" type="text/css"/>
         <link href="../component/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../component/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>Course</title>
@@ -31,32 +32,33 @@
 
                         String id = request.getParameter("id");
                         pst = con.prepareStatement("select * from course where id = ?");
-                        pst.setString(1,id);
+                        pst.setString(1, id);
                         rs = pst.executeQuery();
-                        
-                        while(rs.next())
-                        {
-                            
-                    
+
+                        while (rs.next()) {
+
+
                     %>
                     <div>
                         <label class="form-label">Course ID</label>
-                        <input type="text" id="id" name="id" placeholder="Course ID" class="form-control" value="<%=rs.getString("id") %>" required>
+                        <input type="text" id="id" name="id" placeholder="Course ID" class="form-control" value="<%=rs.getString("id")%>" required>
                     </div>
                     <div>
                         <label class="form-label">Course Name</label>
-                        <input type="text" id="name" name="name" placeholder="Course Name" class="form-control" value="<%=rs.getString("courseName") %>" required>
+                        <input type="text" id="name" name="name" placeholder="Course Name" class="form-control" value="<%=rs.getString("courseName")%>" required>
                     </div>
                     <div>
                         <label class="form-label">Duration</label>
-                        <input type="text" id="duration" name="duration" placeholder="Duration" class="form-control" value="<%=rs.getString("duration") %>" required>
+                        <input type="text" id="duration" name="duration" placeholder="Duration" class="form-control" value="<%=rs.getString("duration")%>" required>
                     </div>
                     </br>       
                     <div>
                         <input type="submit" name="submit" class="btn btn-info" value="submit">
                         <input type="reset" name="reset" class="btn btn-warning" value="reset">
+                        <a href="course.jsp" class="btn btn-outline-secondary float-end">Show All Courses</a>
+
                     </div>
-                    <% } %>
+                    <% }%>
                 </form>
             </div>
             <div class="col-sm-8">

@@ -37,7 +37,7 @@
                 </ul>
             </div>
         </nav>
-        <h1>Welcome to the Student Management System!</h1>
+        <h1 class="index-title">Welcome to the Student Management System!</h1>
         <img src="images/students_login.jpg" alt=""/>
     </body>
 </html>
