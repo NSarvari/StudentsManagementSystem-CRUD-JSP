@@ -9,15 +9,15 @@
 <% Class.forName("com.mysql.jdbc.Driver");%>
 
 <%
-    String courseId = request.getParameter("id");
+    String studentId = request.getParameter("id");
     
     Connection con;
     PreparedStatement pst;
     
     Class.forName("com.mysql.jdbc.Driver");
     con =DriverManager.getConnection("jdbc:mysql://localhost:3306/student-management-system-java", "root","");
-    pst = con.prepareStatement("delete from course where id=?");
-    pst.setString(1,courseId);
+    pst = con.prepareStatement("delete from student where id=?");
+    pst.setString(1,studentId);
     pst.executeUpdate();
     
     out.println("Record Deleted");
