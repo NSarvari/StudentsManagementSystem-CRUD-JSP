@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="component/style.css" rel="stylesheet" type="text/css"/>
         <link href="component/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="component/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>Student Management System</title>
@@ -22,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="course/course.jsp">Course</a>

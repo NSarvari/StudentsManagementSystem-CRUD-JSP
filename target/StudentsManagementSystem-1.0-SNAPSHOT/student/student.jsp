@@ -17,11 +17,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../component/style.css" rel="stylesheet" type="text/css"/>
         <link href="../component/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../component/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>Student</title>
     </head>
     <body>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Student Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.jsp">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../course/course.jsp">Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../batch/batch.jsp">Batch</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <h1>Student Registration</h1>
         <div class="row">
             <div class="col-sm-4">
@@ -107,8 +127,8 @@
                                 <td><%=rs.getString("b.batchName")%></td>
                                 <td><%=rs.getString("s.address")%></td>
                                 <td><%=rs.getString("s.phone")%></td>
-                                <td><a href="studentUpdate.jsp?id=<%=id %>">Edit</a></td>
-                                <td><a href="studentDelete.jsp?id=<%=id %>">Delete</a></td>
+                                <td><a href="studentUpdate.jsp?id=<%=id %>" class="btn btn-outline-success">Edit</a></td>
+                                <td><a href="studentDelete.jsp?id=<%=id %>" class="btn btn-outline-danger">Delete</a></td>
                             </tr>
                             <%}%>
                         </tbody>

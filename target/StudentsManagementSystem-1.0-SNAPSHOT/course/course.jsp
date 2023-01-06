@@ -11,11 +11,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../component/style.css" rel="stylesheet" type="text/css"/>
         <link href="../component/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../component/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>Course</title>
     </head>
     <body>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Student Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.jsp">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../batch/batch.jsp">Batch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../student/student.jsp">Student</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <h1>Course</h1>
         <div class="row">
             <div class="col-sm-4">
@@ -66,8 +86,8 @@
                             <tr>
                                 <td><%=rs.getString("courseName") %></td>
                                 <td><%=rs.getString("duration") %></td>
-                                <td><a href="courseUpdate.jsp?id=<%=id %>">Edit</a></td>
-                                <td><a href="courseDelete.jsp?id=<%=id %>">Delete</a></td>
+                                <td><a href="courseUpdate.jsp?id=<%=id %>" class="btn btn-outline-success">Edit</a></td>
+                                <td><a href="courseDelete.jsp?id=<%=id %>" class="btn btn-outline-danger">Delete</a></td>
                             </tr>
                             <% } %>
                         </tbody>
