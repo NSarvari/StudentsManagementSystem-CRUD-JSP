@@ -28,7 +28,7 @@
                         <a class="nav-link" href="course/course.jsp">Course</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Batch</a>
+                        <a class="nav-link" href="batch/batch.jsp">Batch</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Student</a>
