@@ -13,10 +13,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="../component/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../component/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <title>Course</title>
+        <title>Batch</title>
     </head>
     <body>
-        <h1>Course</h1>
+        <h1>Batch</h1>
         <div class="row">
             <div class="col-sm-4">
                 <form method="POST" align="left" action="add.jsp">
@@ -53,7 +53,7 @@
                                 
                                 Class.forName("com.mysql.jdbc.Driver");
                                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student-management-system-java", "root", "");
-                                String query = "select * from course";
+                                String query = "select * from batch";
                                 Statement st = con.createStatement();
                                 rs = st.executeQuery(query);
                                 while(rs.next())
@@ -64,10 +64,10 @@
 
                             %>
                             <tr>
-                                <td><%=rs.getString("courseName") %></td>
-                                <td><%=rs.getString("duration") %></td>
-                                <td><a href="courseUpdate.jsp?id=<%=id %>">Edit</a></td>
-                                <td><a href="courseDelete.jsp?id=<%=id %>">Delete</a></td>
+                                <td><%=rs.getString("batchName") %></td>
+                                <td><%=rs.getString("year") %></td>
+                                <td><a href="batchUpdate.jsp?id=<%=id %>">Edit</a></td>
+                                <td><a href="batchDelete.jsp?id=<%=id %>">Delete</a></td>
                             </tr>
                             <% } %>
                         </tbody>

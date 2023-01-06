@@ -20,7 +20,7 @@
         <h1>Course</h1>
         <div class="row">
             <div class="col-sm-4">
-                <form method="POST" align="left" action="courseData.jsp">
+                <form method="POST" align="left" action="batchData.jsp">
                     <%
                         Connection con;
                         PreparedStatement pst;
@@ -30,7 +30,7 @@
                         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student-management-system-java", "root", "");
 
                         String id = request.getParameter("id");
-                        pst = con.prepareStatement("select * from course where id = ?");
+                        pst = con.prepareStatement("select * from batch where id = ?");
                         pst.setString(1,id);
                         rs = pst.executeQuery();
                         
@@ -40,16 +40,16 @@
                     
                     %>
                     <div>
-                        <label class="form-label">Course ID</label>
-                        <input type="text" id="id" name="id" placeholder="Course ID" class="form-control" value="<%=rs.getString("id") %>" required>
+                        <label class="form-label">Batch ID</label>
+                        <input type="text" id="id" name="id" placeholder="Batch ID" class="form-control" value="<%=rs.getString("id") %>" required>
                     </div>
                     <div>
-                        <label class="form-label">Course Name</label>
-                        <input type="text" id="name" name="name" placeholder="Course Name" class="form-control" value="<%=rs.getString("courseName") %>" required>
+                        <label class="form-label">Batch Name</label>
+                        <input type="text" id="bname" name="bname" placeholder="Batch Name" class="form-control" value="<%=rs.getString("batchName") %>" required>
                     </div>
                     <div>
-                        <label class="form-label">Duration</label>
-                        <input type="text" id="duration" name="duration" placeholder="Duration" class="form-control" value="<%=rs.getString("duration") %>" required>
+                        <label class="form-label">Year</label>
+                        <input type="text" id="year" name="year" placeholder="Year" class="form-control" value="<%=rs.getString("year") %>" required>
                     </div>
                     </br>       
                     <div>

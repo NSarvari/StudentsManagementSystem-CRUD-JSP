@@ -8,19 +8,19 @@
 <% Class.forName("com.mysql.jdbc.Driver");%>
 
 <%
-    String courseId = request.getParameter("id");
-    String courseName = request.getParameter("name");
-    String duration = request.getParameter("duration");
+    String batchId = request.getParameter("id");
+    String batchName = request.getParameter("bname");
+    String year = request.getParameter("year");
     
     Connection con;
     PreparedStatement pst;
     
     Class.forName("com.mysql.jdbc.Driver");
     con =DriverManager.getConnection("jdbc:mysql://localhost:3306/student-management-system-java", "root","");
-    pst = con.prepareStatement("update course set courseName=?, duration=? where id =?");
-    pst.setString(1,courseName);
-    pst.setString(2,duration);
-    pst.setString(3,courseId);
+    pst = con.prepareStatement("update batch set batchName=?, year=? where id =?");
+    pst.setString(1,batchName);
+    pst.setString(2,year);
+    pst.setString(3,batchId);
     pst.executeUpdate();
     
     out.println("Record Updated");
