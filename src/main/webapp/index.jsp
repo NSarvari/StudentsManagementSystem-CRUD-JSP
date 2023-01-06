@@ -31,7 +31,7 @@
                         <a class="nav-link" href="batch/batch.jsp">Batch</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Student</a>
+                        <a class="nav-link" href="student/student.jsp">Student</a>
                     </li>
                 </ul>
             </div>
