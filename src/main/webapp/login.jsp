@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="component/style.css" rel="stylesheet" type="text/css"/>
         <link href="component/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="component/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>Student Management System- login</title>
