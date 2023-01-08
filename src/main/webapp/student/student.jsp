@@ -23,26 +23,33 @@
         <title>Student</title>
     </head>
     <body>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Student Management System</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.jsp">Student Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.jsp">Home <span class="sr-only"></span></a>
-                    </li>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="../course/course.jsp">Course</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../batch/batch.jsp">Batch</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login.jsp">Logout</a>
+                    </li>
                 </ul>
             </div>
+            <div>
+                <form class="form-inline my-2 my-lg-0" action="search.jsp">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Search</button>
+                </form>
+            </div>
         </nav>
-        <h1>Student Registration</h1>
+        <h1>Register the Student</h1>
         <div class="row">
             <div class="col-sm-4">
                 <form method="POST" align="left" action="add.jsp">
@@ -127,8 +134,8 @@
                                 <td><%=rs.getString("b.batchName")%></td>
                                 <td><%=rs.getString("s.address")%></td>
                                 <td><%=rs.getString("s.phone")%></td>
-                                <td><a href="studentUpdate.jsp?id=<%=id %>" class="btn btn-outline-success">Edit</a></td>
-                                <td><a href="studentDelete.jsp?id=<%=id %>" class="btn btn-outline-danger">Delete</a></td>
+                                <td><a href="studentUpdate.jsp?id=<%=id%>" class="btn btn-outline-success">Edit</a></td>
+                                <td><a href="studentDelete.jsp?id=<%=id%>" class="btn btn-outline-danger">Delete</a></td>
                             </tr>
                             <%}%>
                         </tbody>

@@ -13,7 +13,7 @@
         <link href="component/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="component/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>Student Management System- login</title>
-        
+
     </head>
     <body>
         <h1>Login</h1>
@@ -29,10 +29,13 @@
                         <input type="password" id="password" name="password" class="form-control" placeholder="Password" size="30px" required>
                     </div>
                     </br>
-                     <div align="left">
-                         <input type="submit" id="submit" name="submit" value="submit" class="btn btn-info">
-                         <input type="reset" id="reset" name="reset" value="reset" class="btn btn-warning">
+                    <div align="left">
+                        <input type="submit" id="submit" name="submit" value="submit" class="btn btn-info">
+                        <input type="reset" id="reset" name="reset" value="reset" class="btn btn-warning">
+                        <a href="register.jsp" class="btn btn-outline-secondary float-end">Create Account</a>
+
                     </div>
+
                 </form>
             </div>
             <div class="col-sm-8">

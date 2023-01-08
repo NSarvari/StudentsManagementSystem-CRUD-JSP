@@ -18,7 +18,7 @@
         <title>Course</title>
     </head>
     <body>
-        <h1>Course</h1>
+        <h1>Update the Course</h1>
         <div class="row">
             <div class="col-sm-4">
                 <form method="POST" align="left" action="courseData.jsp">

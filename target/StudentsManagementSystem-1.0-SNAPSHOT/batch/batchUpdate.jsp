@@ -18,7 +18,7 @@
         <title>Batch</title>
     </head>
     <body>
-        <h1>Batch Update</h1>
+        <h1>Update the Batch</h1>
         <div class="row">
             <div class="col-sm-4">
                 <form method="POST" align="left" action="batchData.jsp">

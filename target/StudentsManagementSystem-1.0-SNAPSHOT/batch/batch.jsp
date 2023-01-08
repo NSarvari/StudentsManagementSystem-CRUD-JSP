@@ -18,26 +18,33 @@
         <title>Batch</title>
     </head>
     <body>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Student Management System</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.jsp">Student Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.jsp">Home <span class="sr-only"></span></a>
-                    </li>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="../course/course.jsp">Course</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../student/student.jsp">Student</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login.jsp">Logout</a>
+                    </li>
                 </ul>
             </div>
+            <div>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
         </nav>
-        <h1>Batch</h1>
+        <h1>Add New Batch</h1>
         <div class="row">
             <div class="col-sm-4">
                 <form method="POST" align="left" action="add.jsp">
@@ -71,26 +78,24 @@
                                 Connection con;
                                 PreparedStatement pst;
                                 ResultSet rs;
-                                
+
                                 Class.forName("com.mysql.jdbc.Driver");
                                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/student-management-system-java", "root", "");
                                 String query = "select * from batch";
                                 Statement st = con.createStatement();
                                 rs = st.executeQuery(query);
-                                while(rs.next())
-                                {
+                                while (rs.next()) {
                                     String id = rs.getString("id");
-                                    
-                                
+
 
                             %>
                             <tr>
-                                <td><%=rs.getString("batchName") %></td>
-                                <td><%=rs.getString("year") %></td>
-                                <td><a href="batchUpdate.jsp?id=<%=id %>" class="btn btn-outline-success">Edit</a></td>
-                                <td><a href="batchDelete.jsp?id=<%=id %>" class="btn btn-outline-danger">Delete</a></td>
+                                <td><%=rs.getString("batchName")%></td>
+                                <td><%=rs.getString("year")%></td>
+                                <td><a href="batchUpdate.jsp?id=<%=id%>" class="btn btn-outline-success">Edit</a></td>
+                                <td><a href="batchDelete.jsp?id=<%=id%>" class="btn btn-outline-danger">Delete</a></td>
                             </tr>
-                            <% } %>
+                            <% }%>
                         </tbody>
                         </thead>
                     </table>

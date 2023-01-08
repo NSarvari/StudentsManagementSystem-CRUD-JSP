@@ -18,7 +18,7 @@
         <title>Student</title>
     </head>
     <body>
-        <h1>Student</h1>
+        <h1>Update Student's Information</h1>
         <div class="row">
             <div class="col-sm-4">
                 <form method="POST" align="left" action="studentData.jsp">
